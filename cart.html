@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Your Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Drawer Navbar (same as index.html) -->
+    <div class="drawer">
+        <div class="drawer-header">
+            <h2>ShopEasy</h2>
+            <button class="close-drawer">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> All Products</a></li>
+                <li><a href="#"><i class="fas fa-tags"></i> Categories</a>
+                    <ul class="submenu">
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Home & Garden</a></li>
+                        <li><a href="#">Sports</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="drawer-overlay"></div>
+
+    <!-- Main Header (same as index.html) -->
+    <header class="main-header">
+        <div class="container">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <div class="logo">
+                <a href="index.html">ShopEasy</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="#" class="user-btn"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &gt; 
+                <a href="products.html">Products</a> &gt; 
+                <span>Shopping Cart</span>
+            </div>
+            
+            <h1>Your Shopping Cart</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <div class="header-product">Product</div>
+                        <div class="header-price">Price</div>
+                        <div class="header-quantity">Quantity</div>
+                        <div class="header-total">Total</div>
+                        <div class="header-remove"></div>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="item-product">
+                            <div class="product-image">
+                                <img src="images/products/product1.jpg" alt="Product 1">
+                            </div>
+                            <div class="product-details">
+                                <h3><a href="product-detail.html">Wireless Headphones</a></h3>
+                                <p>Color: Black</p>
+                                <p>Size: One Size</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$99.99</div>
+                        <div class="item-quantity">
+                            <div class="quantity-selector">
+                                <button class="quantity-minus">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="quantity-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">$99.99</div>
+                        <div class="item-remove">
+                            <button class="remove-item"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="item-product">
+                            <div class="product-image">
+                                <img src="images/products/product2.jpg" alt="Product 2">
+                            </div>
+                            <div class="product-details">
+                                <h3><a href="product-detail.html">Smart Watch</a></h3>
+                                <p>Color: Silver</p>
+                                <p>Size: Standard</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$199.99</div>
+                        <div class="item-quantity">
+                            <div class="quantity-selector">
+                                <button class="quantity-minus">-</button>
+                                <input type="number" value="2" min="1">
+                                <button class="quantity-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">$399.98</div>
+                        <div class="item-remove">
+                            <button class="remove-item"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <button class="btn btn-outline">Continue Shopping</button>
+                        <button class="btn btn-outline update-cart">Update Cart</button>
+                        <button class="btn btn-outline clear-cart">Clear Cart</button>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$499.97</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span>$35.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>$534.97</span>
+                    </div>
+                    
+                    <div class="coupon-code">
+                        <h4>Have a coupon?</h4>
+                        <div class="coupon-form">
+                            <input type="text" placeholder="Enter coupon code">
+                            <button class="btn btn-outline">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn checkout-btn">Proceed to Checkout</button>
+                    
+                    <div class="secure-checkout">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure Checkout</span>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <img src="https://via.placeholder.com/40" alt="Visa">
+                        <img src="https://via.placeholder.com/40" alt="Mastercard">
+                        <img src="https://via.placeholder.com/40" alt="Amex">
+                        <img src="https://via.placeholder.com/40" alt="PayPal">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cross-sell">
+                <h3>You May Also Like</h3>
+                <div class="products-grid" id="cross-sell-products">
+                    <!-- Cross-sell products will be loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@shopeasy.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/drawer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
