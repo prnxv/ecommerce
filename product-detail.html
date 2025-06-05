@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Product Detail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/drawer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Drawer Navbar (same as index.html) -->
+    <div class="drawer">
+        <div class="drawer-header">
+            <h2>ShopEasy</h2>
+            <button class="close-drawer">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="products.html"><i class="fas fa-shopping-bag"></i> All Products</a></li>
+                <li><a href="#"><i class="fas fa-tags"></i> Categories</a>
+                    <ul class="submenu">
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Home & Garden</a></li>
+                        <li><a href="#">Sports</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="drawer-overlay"></div>
+
+    <!-- Main Header (same as index.html) -->
+    <header class="main-header">
+        <div class="container">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <div class="logo">
+                <a href="index.html">ShopEasy</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="#" class="user-btn"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &gt; 
+                <a href="products.html">Products</a> &gt; 
+                <span id="product-category-breadcrumb">Category</span> &gt; 
+                <span id="product-name-breadcrumb">Product Name</span>
+            </div>
+            
+            <div class="product-detail-container">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="main-product-image" src="images/products/product1.jpg" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="images/products/product1.jpg" alt="Thumbnail 1">
+                        <img src="images/products/product2.jpg" alt="Thumbnail 2">
+                        <img src="images/products/product3.jpg" alt="Thumbnail 3">
+                        <img src="images/products/product4.jpg" alt="Thumbnail 4">
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 id="product-name">Product Name</h1>
+                    <div class="product-meta">
+                        <span class="product-sku">SKU: <span id="product-sku">PRD12345</span></span>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(24 reviews)</span>
+                        </span>
+                    </div>
+                    
+                    <div class="product-price">
+                        <span class="current-price" id="product-price">$99.99</span>
+                        <span class="original-price">$129.99</span>
+                        <span class="discount">23% OFF</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p id="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="option-size">
+                            <label>Size:</label>
+                            <select id="size-select">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                                <option value="xlarge">X-Large</option>
+                            </select>
+                        </div>
+                        <div class="option-color">
+                            <label>Color:</label>
+                            <div class="color-options">
+                                <span class="color-option red active" data-color="red"></span>
+                                <span class="color-option blue" data-color="blue"></span>
+                                <span class="color-option green" data-color="green"></span>
+                                <span class="color-option black" data-color="black"></span>
+                            </div>
+                        </div>
+                        <div class="option-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="quantity-minus">-</button>
+                                <input type="number" value="1" min="1" max="10" id="product-quantity">
+                                <button class="quantity-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" id="add-to-cart">Add to Cart</button>
+                        <button class="btn btn-outline">Add to Wishlist</button>
+                    </div>
+                    
+                    <div class="product-shipping">
+                        <div class="shipping-info">
+                            <i class="fas fa-truck"></i>
+                            <span>Free shipping on orders over $50</span>
+                        </div>
+                        <div class="return-info">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day easy returns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-tabs">
+                <ul class="tabs-nav">
+                    <li class="active" data-tab="description">Description</li>
+                    <li data-tab="specs">Specifications</li>
+                    <li data-tab="reviews">Reviews</li>
+                    <li data-tab="shipping">Shipping & Returns</li>
+                </ul>
+                
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>Product Description</h3>
+                        <p id="full-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <ul>
+                            <li>High-quality materials</li>
+                            <li>Durable construction</li>
+                            <li>Easy to use and maintain</li>
+                            <li>Eco-friendly packaging</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane" id="specs">
+                        <h3>Product Specifications</h3>
+                        <table>
+                            <tr>
+                                <th>Material</th>
+                                <td id="spec-material">Cotton</td>
+                            </tr>
+                            <tr>
+                                <th>Dimensions</th>
+                                <td id="spec-dimensions">10 x 5 x 2 inches</td>
+                            </tr>
+                            <tr>
+                                <th>Weight</th>
+                                <td id="spec-weight">0.5 lbs</td>
+                            </tr>
+                            <tr>
+                                <th>Brand</th>
+                                <td id="spec-brand">ShopEasy</td>
+                            </tr>
+                            <tr>
+                                <th>Warranty</th>
+                                <td id="spec-warranty">1 year</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews">
+                        <h3>Customer Reviews</h3>
+                        <div class="review-summary">
+                            <div class="average-rating">
+                                <span>4.5</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>Based on 24 reviews</p>
+                            </div>
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <span>5 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 70%;"></div>
+                                    </div>
+                                    <span>70%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>4 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 20%;"></div>
+                                    </div>
+                                    <span>20%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>3 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 5%;"></div>
+                                    </div>
+                                    <span>5%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>2 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 3%;"></div>
+                                    </div>
+                                    <span>3%</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>1 star</span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 2%;"></div>
+                                    </div>
+                                    <span>2%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-form">
+                            <h4>Write a Review</h4>
+                            <form id="review-form">
+                                <div class="form-group">
+                                    <label>Your Rating</label>
+                                    <div class="rating-input">
+                                        <i class="far fa-star" data-rating="1"></i>
+                                        <i class="far fa-star" data-rating="2"></i>
+                                        <i class="far fa-star" data-rating="3"></i>
+                                        <i class="far fa-star" data-rating="4"></i>
+                                        <i class="far fa-star" data-rating="5"></i>
+                                        <input type="hidden" id="rating-value" name="rating">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-name">Your Name</label>
+                                    <input type="text" id="review-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-email">Email</label>
+                                    <input type="email" id="review-email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-title">Review Title</label>
+                                    <input type="text" id="review-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-text">Your Review</label>
+                                    <textarea id="review-text" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn">Submit Review</button>
+                            </form>
+                        </div>
+                        
+                        <div class="review-list">
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="review-author">John D.</div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-date">October 15, 2023</div>
+                                </div>
+                                <h5 class="review-title">Excellent product!</h5>
+                                <p class="review-text">This product exceeded my expectations. The quality is outstanding and it arrived sooner than expected. Will definitely purchase again!</p>
+                            </div>
+                            
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="review-author">Sarah M.</div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="review-date">September 28, 2023</div>
+                                </div>
+                                <h5 class="review-title">Very good, but could be better</h5>
+                                <p class="review-text">I'm happy with my purchase overall, but I think the product could be improved in a few small areas. Still, it's good value for the price.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="shipping">
+                        <h3>Shipping & Returns</h3>
+                        <h4>Shipping Information</h4>
+                        <p>We offer standard and expedited shipping options. Most orders are processed within 1-2 business days.</p>
+                        <ul>
+                            <li>Standard Shipping: 3-5 business days - $4.99 (Free on orders over $50)</li>
+                            <li>Expedited Shipping: 2-3 business days - $9.99</li>
+                            <li>Overnight Shipping: 1 business day - $19.99</li>
+                        </ul>
+                        
+                        <h4>Returns Policy</h4>
+                        <p>We want you to be completely satisfied with your purchase. If you're not happy with your item for any reason, you may return it within 30 days of receipt for a full refund or exchange.</p>
+                        <ul>
+                            <li>Items must be in original condition with all tags attached</li>
+                            <li>Return shipping is the customer's responsibility unless the return is due to our error</li>
+                            <li>Refunds will be processed within 3-5 business days after we receive the returned item</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="related-products">
+                <h3>You May Also Like</h3>
+                <div class="products-grid" id="related-products">
+                    <!-- Related products will be loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service<
